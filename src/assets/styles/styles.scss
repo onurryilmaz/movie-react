@@ -1,0 +1,124 @@
+@import './fontawesome.css';
+@import './variables.scss';
+@import './mixin.scss';
+@import './general.scss';
+@import './alert.scss';
+@import './button.scss';
+
+
+//COMPONENT SCSS
+
+header {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+    z-index: 99;
+
+    .header-menu {
+        ul {
+            display: flex;
+
+            a {
+                padding: 10px;
+            }
+        }
+    }
+
+    nav {
+        display: block;
+
+        ul {
+            display: flex;
+            background-color: #fff;
+
+            &>li {
+                position: relative;
+
+                a {
+                    display: block;
+                    padding: 10px;
+                    white-space: nowrap;
+                }
+
+                &>ul {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0px;
+                    -webkit-box-shadow: 0px 7px 13px 0px rgba(50, 50, 50, 0.34);
+                    -moz-box-shadow: 0px 7px 13px 0px rgba(50, 50, 50, 0.34);
+                    box-shadow: 0px 7px 13px 0px rgba(50, 50, 50, 0.34);
+
+                    ul {
+                        top: 0px;
+                        left: 100%;
+                        -webkit-box-shadow: 0px 7px 13px 0px rgba(50, 50, 50, 0.34);
+                        -moz-box-shadow: 0px 7px 13px 0px rgba(50, 50, 50, 0.34);
+                        box-shadow: 0px 7px 13px 0px rgba(50, 50, 50, 0.34);
+                    }
+                }
+
+                &:hover {
+                    &>ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    padding: 20px 50px;
+}
+
+//Category Setting
+.category-settings {
+    ul {
+        li {
+            padding: 10px 0px 0 0;
+        }
+    }
+
+    .sub-cat {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .click-button {
+            padding: 0px 15px;
+            cursor: pointer;
+
+            &::before {
+                display: block;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 900;
+                content: '';
+            }
+        }
+
+        ul {
+            width: 100%;
+            display: none;
+            padding-left: 15px;
+        }
+
+        &.active {
+            &>.form-check {
+                color: $color-blue;
+            }
+
+            &>.click-button {
+                color: $color-blue;
+                &::before {
+                    content: '';
+                }
+            }
+
+            &>ul {
+                display: block;
+            }
+        }
+    }
+}

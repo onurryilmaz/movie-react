@@ -1,0 +1,13 @@
+/*== BUTTON ==*/
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    .btn {
+        margin-left: 15px;
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+    
+}

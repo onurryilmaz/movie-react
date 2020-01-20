@@ -1,0 +1,33 @@
+/*== ALERT ==*/
+.alert-border {
+    background-color: #f2f4f6;
+    border : 1px solid;
+
+    &.danger {
+        border-color: $color-red;
+    }
+
+    &.info {
+        border-color: $color-info;
+    }
+
+    &.warning {
+        border-color: $color-orange;
+    }
+
+    &.success {
+        border-color: $color-green;
+    }
+
+    &.primary {
+        border-color: $color-blue-pastel;
+    }
+
+    &.inverse {
+        border-color: $color-text-3;
+    }
+
+    &.purple {
+        border-color: $color-purple;
+    }
+}
